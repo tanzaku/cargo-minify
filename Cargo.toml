@@ -1,0 +1,28 @@
+[package]
+name = "cargo-minify"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# ra_ap_hir_defが依存しているcrateのバージョンが5.3.1に上がったことで手元ではビルドできない
+# エラーを解消するために、ra_ap_hir_defが実際に依存しているバージョンで固定する
+dashmap = { version = "=5.2.0", features = ["raw-api"] }
+
+anyhow = "1.0.57"
+env_logger = "0.9.0"
+itertools = "0.10.3"
+log = "0.4.16"
+quote = "1.0.18"
+ra_ap_ide = "0.0.104"
+ra_ap_vfs = "0.0.104"
+ra_ap_cfg = "0.0.104"
+ra_ap_base_db = "0.0.104"
+ra_ap_hir_def = "0.0.104"
+ra_ap_project_model = "0.0.104"
+ra_ap_rust-analyzer = "0.0.104"
+syn = { version = "1.0.92", features = ["full", "extra-traits", "visit-mut"] }
+
+proc-macro2 = { version = "1.0.37", features = ["span-locations"] }
+argopt = "0.3.0"
