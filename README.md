@@ -13,3 +13,4 @@ cargo minify --root path/to/workspace
 ## TODO
 - [ ] マクロ対応
 - [ ] 複数ファイルからなるworkspaceに対応
+- [ ] コメントが存在するソースコードでの動作確認
